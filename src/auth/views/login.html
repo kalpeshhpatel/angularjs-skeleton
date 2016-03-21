@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: 80px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-offset-0">
+            <!--<h3 class="text-center mb-20">Login</h3>-->
+            <div class="form-wrapper">
+                <form role="form" novalidate="novalidate" name="loginForm" ng-submit="login(loginForm)">
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.email.$invalid && (loginForm.email.$touched || loginForm.$submitted),"has-success": loginForm.email.$valid && loginForm.$submitted}'>
+                        <label for="email">Email address</label>
+                        <input autocomplete="off" type="email" class="form-control" name="email" id="email"
+                               placeholder="Email" ng-model="user.email" required>
+                        <span class="help-block" ng-messages="loginForm.email.$error"
+                              ng-if="(loginForm.email.$touched || loginForm.$submitted) && loginForm.email.$invalid">
+                                <span class="text-danger" ng-message="email">Please enter valid email address</span>
+                                <span class="text-danger" ng-message="required">Email is required</span>
+                        </span>
+                    </div>
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.password.$invalid && (loginForm.password.$touched || loginForm.$submitted),"has-success": loginForm.password.$valid && loginForm.$submitted}'>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Password" ng-model="user.password" required>
+                        <span class="help-block" ng-messages="loginForm.password.$error"
+                              ng-if="(loginForm.password.$touched || loginForm.$submitted) && loginForm.password.$invalid">
+                                <span class="text-danger" ng-message="required">Password is required</span>
+                        </span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-20">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

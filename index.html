@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="" id="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>My Project Title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- build:css assets/css/app.css -->
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css">
+        <!-- Module CSS -->
+        <link rel="stylesheet" href="assets/css/angular/angular-dialogs.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/angular/angular-busy.css" type="text/css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+        <!-- endbuild -->
+
+        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ng-controller="AppCtrl">
+
+        <noscript>
+            <div class="alert alert-default mt-20">
+                Your browser does not support JavaScript! For full functionality of this site it is necessary to enable JavaScript.
+                Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+                instructions how to enable JavaScript in your web browser</a>.
+            </div>
+        </noscript>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div ui-view></div>
+
+
+        <!-- Scripts -->
+        <script  src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script  src="assets/js/vendor/bootstrap.min.js"></script>
+        <script  src="assets/js/timezone-detect.js"></script>
+        <script  src="assets/js/noty.min.js"></script>
+        <script  src="assets/js/vendor/lodash.js"></script>
+        <script  src="assets/js/vendor/moment.js"></script>
+
+        <script  src="assets/js/vendor/angular-1.4.7.js"></script>
+        <script  src="assets/js/vendor/angular-ui-router.js"></script>
+        <script  src="assets/js/vendor/ui-bootstrap.js"></script>
+        <script  src="assets/js/vendor/ui-bootstrap-tpls.js"></script>
+        <script  src="assets/js/vendor/angular-messages.js"></script>
+        <script  src="assets/js/vendor/angular-sanitize.js"></script>
+        <script  src="assets/js/vendor/angular-animate.js"></script>
+        <script  src="assets/js/vendor/angular-cookie.js"></script>
+        <script  src="assets/js/vendor/angular-busy.js"></script>
+        <script  src="assets/js/vendor/angular-dialogs.js"></script>
+        <script  src="assets/js/vendor/ng-file-upload-shim.js"></script>
+        <script  src="assets/js/vendor/ng-file-upload-all.js"></script>
+
+        <!-- Custom module Files -->
+        <script  src="src/app/module.js"></script>
+        <script  src="src/app/controller.js"></script>
+        <script  src="src/app/service.js"></script>
+
+        <script  src="src/app/directives/directives.js"></script>
+        <script  src="src/app/filters/filters.js"></script>
+
+        <script  src="src/app/utilities/http.interceptor.js"></script>
+        <script  src="src/app/utilities/constant.js"></script>
+        <script  src="src/app/utilities/helper.js"></script>
+        <script  src="src/app/utilities/grid.parser.js"></script>
+        <script  src="src/app/utilities/notification.service.js"></script>
+        <script  src="src/app/utilities/lang.js"></script>
+
+        <script  src="src/auth/module.js"></script>
+        <script  src="src/auth/controller.js"></script>
+        <script  src="src/auth/service.js"></script>
+
+        <script  src="assets/js/script.js"></script>
+        <script  src="config.js"></script>
+
+    </body>
+</html>

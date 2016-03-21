@@ -1,0 +1,119 @@
+<div class="container register-container" style="margin-top: 80px;">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-offset-0">
+            <div class="form-wrapper" cg-busy="{promise: signUpBusy}">
+                <h3 class="text-center mb-20">Register</h3>
+
+                <form class="clearfix form-horizontal" role="form" novalidate="novalidate" name="loginForm" ng-submit="register(loginForm)">
+                    <!-- First name -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.first_name.$invalid && (loginForm.first_name.$touched || loginForm.$submitted),"has-success": loginForm.first_name.$valid && loginForm.$submitted}'>
+                        <label for="first_name" class="col-sm-3 control-label">First Name</label>
+                        <div class="col-sm-8">
+                            <input autocomplete="off" type="text" class="form-control input-lg" name="first_name" id="first_name"
+                                   placeholder="First Name" ng-model="user.first_name" required ng-minlength="3" ng-maxlength="30">
+                                <span class="help-block" ng-messages="loginForm.email.$error"
+                                      ng-if="(loginForm.first_name.$touched || loginForm.$submitted) && loginForm.first_name.$invalid">
+                                        <span class="text-danger" ng-message="required">First name is required</span>
+                                        <span class="text-danger" ng-message="minlength">Min 3 chars is required</span>
+                                        <span class="text-danger" ng-message="maxlength">Max 30 chars</span>
+                                </span>
+                        </div>
+                    </div>
+                    <!-- Last name -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.last_name.$invalid && (loginForm.last_name.$touched || loginForm.$submitted),"has-success": loginForm.last_name.$valid && loginForm.$submitted}'>
+                        <label for="last_name" class="col-sm-3 control-label">Last Name</label>
+                        <div class="col-sm-8">
+                            <input autocomplete="off" type="text" class="form-control input-lg" name="last_name" id="last_name"
+                                   placeholder="Lasr Name" ng-model="user.last_name" required ng-minlength="3" ng-maxlength="30">
+                                <span class="help-block" ng-messages="loginForm.email.$error"
+                                      ng-if="(loginForm.last_name.$touched || loginForm.$submitted) && loginForm.last_name.$invalid">
+                                        <span class="text-danger" ng-message="required">Last name is required</span>
+                                        <span class="text-danger" ng-message="minlength">Min 3 chars is required</span>
+                                        <span class="text-danger" ng-message="maxlength">Max 30 chars</span>
+                                </span>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.email.$invalid && (loginForm.email.$touched || loginForm.$submitted),"has-success": loginForm.email.$valid && loginForm.$submitted}'>
+                        <label for="email" class="col-sm-3 control-label">Email address</label>
+                        <div class="col-sm-8">
+                            <input autocomplete="off" type="email" class="form-control input-lg" name="email" id="email"
+                                   placeholder="Email" ng-model="user.email" required>
+                                <span class="help-block" ng-messages="loginForm.email.$error"
+                                      ng-if="(loginForm.email.$touched || loginForm.$submitted) && loginForm.email.$invalid">
+                                        <span class="text-danger" ng-message="email">Please enter valid email address</span>
+                                        <span class="text-danger" ng-message="required">Email is required</span>
+                                </span>
+                        </div>
+                    </div>
+
+                    <!-- Profile pic -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.profile_pic.$invalid && (loginForm.profile_pic.$touched || loginForm.$submitted),"has-success": loginForm.profile_pic.$valid && loginForm.$submitted}'>
+                        <label class="col-sm-3 control-label">Profile Pic</label>
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <img ng-src="{{user.profile_pic_url ? user.profile_pic_url : 'data:image/png;base64,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'}}" alt="user image">
+                                <div class="caption text-center">
+
+                                    <div ngf-select
+                                         ng-model="files"
+                                         ngf-change="uploadFile($files)"
+                                         class="drop-box drag-drop-container cursor-hover text-center border border-lg border-dashed p-20 cursor-pointer"
+                                         ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="false"
+                                         accept="image/*">
+                                        <button class="btn btn-primary btn-sm btn-block" type="button">Upload</button>
+                                        <!--<span class="clearfix small help-block">*Only image files are allowed</span>-->
+                                        <!--<span class="help-block text-center pt-10">Accepted formats: gif, png, jpg. Max file size 2Mb</span>-->
+                                    </div>
+                                    <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.password.$invalid && (loginForm.password.$touched || loginForm.$submitted),"has-success": loginForm.password.$valid && loginForm.$submitted}'>
+                        <label for="password" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control input-lg" id="password" name="password"
+                                   placeholder="Password" ng-model="user.password" required ng-minlength="6" ng-maxlength="30">
+                                <span class="help-block" ng-messages="loginForm.password.$error"
+                                      ng-if="(loginForm.password.$touched || loginForm.$submitted) && loginForm.password.$invalid">
+                                        <span class="text-danger" ng-message="required">Password is required</span>
+                                        <span class="text-danger" ng-message="minlength">Min 6 chars is required</span>
+                                        <span class="text-danger" ng-message="maxlength">Max 30 chars</span>
+                                </span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm password -->
+                    <div class="form-group mb-15"
+                         ng-class='{"has-error": loginForm.password.$invalid && (loginForm.confirm_password.$touched || loginForm.$submitted),"has-success": loginForm.confirm_password.$valid && loginForm.$submitted}'>
+                        <label for="confirm_password" class="col-sm-3 control-label">Confirm Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control input-lg" id="confirm_password" name="confirm_password" match="user.password"
+                                   placeholder="Confirm Password" ng-model="user.confirm_password" required ng-minlength="6" ng-maxlength="30">
+                                <span class="help-block" ng-messages="loginForm.confirm_password.$error"
+                                      ng-if="(loginForm.confirm_password.$touched || loginForm.$submitted) && loginForm.confirm_password.$invalid">
+                                        <span class="text-danger" ng-message="required">Confirm Password is required</span>
+                                    <span class="text-danger" ng-message="minlength">Min 6 chars is required</span>
+                                        <span class="text-danger" ng-message="maxlength">Max 30 chars</span>
+                                        <span class="text-danger" ng-message="match">Passwords not matching</span>
+                                </span>
+                        </div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary col-md-3 btn-lg mt-20" style="float: none;" ng-disabled="loginForm.$invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
