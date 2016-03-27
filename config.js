@@ -1,5 +1,5 @@
 var systemEnvironment = "local";
-var domain = "realmile.com";
+var domain = "mydomain.com";
 var projectKey = 'KEY'; //add your project key
 var configUrl = systemEnvironment != 'prod' ? "//"+projectKey+"-config-"+systemEnvironment+"."+domain+"/config.json" : "//config.dagent.com/config.json";
 var config = {};
