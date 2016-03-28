@@ -559,6 +559,24 @@ fieldset[disabled] .i-checks input + i:before {
     display: none;
 }
 
+.dis-flex {
+    display: flex;
+}
+
 .dis-table {
     display: table;
 }
+
+.dis-table-row {
+    display: table-row;
+}
+
+.dis-table-cell {
+    display: table-cell;
+}
+
+.dis-list-item {
+    display: list-item;
+}
+
+
