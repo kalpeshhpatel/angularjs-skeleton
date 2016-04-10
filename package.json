@@ -1,7 +1,7 @@
 {
   "name": "AngularJS Skeleton",
   "version": "1.0.0",
-  "description": "World Cup of Sales",
+  "description": "AngularJS Skeleton",
   "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
