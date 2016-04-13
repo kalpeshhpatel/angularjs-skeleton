@@ -10,7 +10,6 @@ APP.factory('AppHelpers',function() {
      * @param form
      */
     factory.resetForm = function(form) {
-        console.log(form);
         if(form) {
             form.$setPristine();
             form.$setUntouched();
